@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - SoLink AI</title>
+    <link rel="stylesheet" href="../main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="trial-header">
+        <a href="/" class="logo-link">
+            <span class="cursor">></span><span class="underscore">_</span>
+            <span class="logo-text">SoLink AI</span>
+        </a>
+    </header>
+
+    <div class="docs-container">
+        <div class="docs-sidebar">
+            <div class="docs-nav">
+                <h3>Getting Started</h3>
+                <ul>
+                    <li><a href="#installation" class="active">Installation</a></li>
+                    <li><a href="#quick-start">Quick Start</a></li>
+                    <li><a href="#configuration">Configuration</a></li>
+                </ul>
+                
+                <h3>Core Concepts</h3>
+                <ul>
+                    <li><a href="#ai-analytics">AI Analytics</a></li>
+                    <li><a href="#wallet-tracking">Wallet Tracking</a></li>
+                    <li><a href="#api-reference">API Reference</a></li>
+                </ul>
+
+                <h3>Advanced Usage</h3>
+                <ul>
+                    <li><a href="#custom-models">Custom Models</a></li>
+                    <li><a href="#webhooks">Webhooks</a></li>
+                    <li><a href="#rate-limits">Rate Limits</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="docs-content">
+            <h1>Documentation</h1>
+            
+            <section id="installation">
+                <h2>Installation</h2>
+                <p>Get started with SoLink AI by installing our npm package:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Terminal</span>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code><span class="function">npm</span> <span class="keyword">install</span> <span class="string">solink-ai</span></code></pre>
+                </div>
+                
+                <p>Or if you're using yarn:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Terminal</span>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code><span class="function">yarn</span> <span class="keyword">add</span> <span class="string">solink-ai</span></code></pre>
+                </div>
+            </section>
+            
+            <section id="quick-start">
+                <h2>Quick Start</h2>
+                <p>Initialize SoLink AI in your project:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code><span class="keyword">import</span> { SoLinkAI } <span class="keyword">from</span> <span class="string">'solink-ai'</span>;
+
+<span class="keyword">const</span> solink = <span class="keyword">new</span> <span class="function">SoLinkAI</span>({
+    <span class="property">apiKey</span>: <span class="string">'your-api-key'</span>,
+    <span class="property">network</span>: <span class="string">'mainnet'</span>,
+    <span class="property">config</span>: {
+        <span class="property">aiModel</span>: <span class="string">'gpt-4'</span>,
+        <span class="property">maxRetries</span>: <span class="number">3</span>
+    }
+});
+
+<span class="comment">// Initialize tracking</span>
+<span class="keyword">await</span> solink.<span class="function">init</span>();</code></pre>
+                </div>
+            </section>
+
+            <section id="configuration">
+                <h2>Configuration</h2>
+                <p>Configure your SoLink AI instance with these options:</p>
+                <div class="config-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Type</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>apiKey</td>
+                                <td><code>string</code></td>
+                                <td>required</td>
+                                <td>Your SoLink AI API key</td>
+                            </tr>
+                            <tr>
+                                <td>network</td>
+                                <td><code>string</code></td>
+                                <td>'mainnet'</td>
+                                <td>Solana network to connect to</td>
+                            </tr>
+                            <tr>
+                                <td>aiModel</td>
+                                <td><code>string</code></td>
+                                <td>'gpt-4'</td>
+                                <td>AI model for analytics</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="ai-analytics">
+                <h2>AI Analytics</h2>
+                <p>Implement AI-powered analytics in your application:</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code><span class="comment">// Track wallet activity</span>
+<span class="keyword">const</span> analysis = <span class="keyword">await</span> solink.<span class="function">analyze</span>({
+    <span class="property">wallet</span>: <span class="string">'0x742d35cc6634c0532925a3b8448c454e4438f44e'</span>,
+    <span class="property">timeframe</span>: <span class="string">'24h'</span>,
+    <span class="property">metrics</span>: [<span class="string">'transactions'</span>, <span class="string">'volume'</span>, <span class="string">'patterns'</span>]
+});
+
+<span class="comment">// Get AI insights</span>
+<span class="keyword">const</span> insights = <span class="keyword">await</span> solink.<span class="function">getInsights</span>(analysis.id);
+
+console.<span class="function">log</span>(insights.summary);
+console.<span class="function">log</span>(insights.recommendations);</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Include your footer here -->
+    <footer class="footer">
+        <!-- ... footer content ... -->
+    </footer>
+
+    <!-- Add the wallet modal -->
+    <div class="wallet-modal" id="walletModal">
+        <div class="modal-content wallet-content">
+            <div class="modal-header">
+                <h3>Connect Your Wallet</h3>
+                <button class="close-btn" onclick="hideWalletModal()">&times;</button>
+            </div>
+            
+            <div class="wallet-options">
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/phantom.svg" alt="Phantom" class="wallet-icon" />
+                    <span>Phantom</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/solflare.svg" alt="Solflare" class="wallet-icon" />
+                    <span>Solflare</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/backpack.svg" alt="Backpack" class="wallet-icon" />
+                    <span>Backpack</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/okx.svg" alt="OKX" class="wallet-icon" />
+                    <span>OKX Wallet</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+            </div>
+
+            <div class="wallet-footer">
+                <p>Wallet integration coming soon! Join our <a href="https://twitter.com/SoLinkAI" target="_blank">Twitter</a> for updates.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ... existing scripts ...
+        
+        function showWalletModal() {
+            document.getElementById('walletModal').classList.add('active');
+        }
+
+        function hideWalletModal() {
+            document.getElementById('walletModal').classList.remove('active');
+        }
+
+        // Update connect wallet button
+        document.querySelector('.connect-wallet').setAttribute('onclick', 'showWalletModal()');
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('walletModal');
+            if (event.target === modal) {
+                hideWalletModal();
+            }
+        }
+    </script>
+</body>
+</html> 

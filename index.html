@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoLink AI - Advanced Crypto Analytics</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-base"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-phantom"></script>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="grid-overlay"></div>
+    <div class="grid-background"></div>
+    
+    <div class="floating-elements">
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+    </div>
+
+    <div class="tech-circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <div class="tech-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="terminal-cursor">
+        <span class="cursor">></span><span class="underscore">_</span>
+        <span class="logo-text">SoLink AI</span>
+    </div>
+
+    <nav>
+        <div class="nav-right">
+            <div class="wallet-container">
+                <button class="connect-wallet" id="connectBtn" onclick="showWalletModal()">
+                    <span class="pulse"></span>
+                    Connect Wallet
+                </button>
+                
+                <div class="connected-state" id="connectedState" style="display: none;">
+                    <span class="wallet-address" id="walletAddress"></span>
+                    <span class="balance" id="walletBalance">-- SOL</span>
+                    <button class="disconnect-btn" onclick="disconnectWallet()">
+                        <svg class="disconnect-icon" viewBox="0 0 24 24" width="16" height="16">
+                            <path fill="currentColor" d="M16 13v-2H7V8l-5 4 5 4v-3z"/>
+                            <path fill="currentColor" d="M20 3h-9c-1.1 0-2 .9-2 2v4h2V5h9v14h-9v-4H9v4c0 1.1.9 2 2 2h9c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                        Disconnect
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="hero-section">
+                <h1 class="gradient-text">AI Blockchain Analytics</h1>
+                <div class="floating-elements">
+                    <div class="glow-orb"></div>
+                    <div class="glow-orb"></div>
+                    <div class="glow-orb"></div>
+                </div>
+            </div>
+            
+            <div class="code-window">
+                <div class="window-controls">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="typing-effect">
+                    <pre><code><span class="keyword">import</span> <span class="class">SoLinkAI</span> <span class="keyword">from</span> <span class="string">'@solink/core'</span>;
+
+<span class="keyword">const</span> <span class="variable">analyzer</span> = <span class="keyword">new</span> <span class="class">SoLinkAI</span>({
+    <span class="property">wallet</span>: <span class="string">'DfLZV18rD7wCQwjYvhTFwuvLh49WSbXFeJFPQb5czifH'</span>,
+    <span class="property">network</span>: <span class="string">'solana'</span>,
+    <span class="property">aiModel</span>: <span class="string">'deepseek-r1'</span>,
+    <span class="property">cluster</span>: <span class="string">'mainnet-beta'</span>,
+    <span class="property">options</span>: {
+        <span class="property">realtime</span>: <span class="boolean">true</span>,
+        <span class="property">patternRecognition</span>: <span class="boolean">true</span>,
+        <span class="property">anomalyDetection</span>: <span class="boolean">true</span>,
+        <span class="property">predictiveAnalytics</span>: <span class="boolean">true</span>
+    }
+});
+
+<span class="keyword">const</span> <span class="variable">analysis</span> = <span class="keyword">await</span> analyzer.<span class="function">analyze</span>();</code></pre>
+                </div>
+            </div>
+
+            <p class="description">
+                Monitor your crypto portfolio with advanced AI analytics.<br>
+                <span class="highlight">Built by developers, for developers.</span>
+            </p>
+
+            <div class="buttons">
+                <button class="primary-btn" onclick="showInstallModal()">NPM INSTALL SoLink AI</button>
+                <a href="/pages/documentation.html" class="secondary-btn">DOCUMENTATION</a>
+            </div>
+        </div>
+        
+        <div class="side-decoration">
+            <div class="tech-stats">
+                <div class="stat">
+                    <span class="stat-value">99.9%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">0.1ms</span>
+                    <span class="stat-label">Response Time</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-hero">
+        <h1>Advanced AI Analytics for Solana</h1>
+        <p>Powerful tools designed for developers and institutions</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card premium">
+            <div class="feature-icon">🤖</div>
+            <h3>AI-Powered Analysis</h3>
+            <p>Advanced machine learning models analyze on-chain data in real-time, providing predictive insights and pattern recognition.</p>
+            <ul class="feature-list">
+                <li>Real-time transaction analysis</li>
+                <li>Pattern recognition</li>
+                <li>Anomaly detection</li>
+                <li>Predictive analytics</li>
+            </ul>
+            <div class="feature-status">Live</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>High-Performance Engine</h3>
+            <p>Built for scale with lightning-fast processing capabilities.</p>
+            <ul class="feature-list">
+                <li>100k+ TPS processing</li>
+                <li>Low latency updates</li>
+                <li>Real-time data streaming</li>
+                <li>Efficient caching system</li>
+            </ul>
+            <div class="feature-status">Live</div>
+        </div>
+
+        <div class="feature-card premium">
+            <div class="feature-icon">🔐</div>
+            <h3>Enterprise Security</h3>
+            <p>Bank-grade security measures ensuring your data stays protected.</p>
+            <ul class="feature-list">
+                <li>End-to-end encryption</li>
+                <li>Multi-sig support</li>
+                <li>Advanced access control</li>
+                <li>Audit logging</li>
+            </ul>
+            <div class="feature-status">Live</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Custom Dashboards</h3>
+            <p>Build and customize your analytics dashboard with our flexible widgets.</p>
+            <ul class="feature-list">
+                <li>Drag-and-drop builder</li>
+                <li>Custom metrics</li>
+                <li>Real-time updates</li>
+                <li>Export capabilities</li>
+            </ul>
+            <div class="feature-status new">Coming Soon</div>
+        </div>
+
+        <div class="feature-card premium">
+            <div class="feature-icon">🔗</div>
+            <h3>API Integration</h3>
+            <p>Seamless integration with your existing infrastructure.</p>
+            <ul class="feature-list">
+                <li>RESTful API</li>
+                <li>WebSocket support</li>
+                <li>Comprehensive SDK</li>
+                <li>Detailed documentation</li>
+            </ul>
+            <div class="feature-status">Beta</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Smart Alerts</h3>
+            <p>Stay informed with intelligent notifications and alerts.</p>
+            <ul class="feature-list">
+                <li>Custom triggers</li>
+                <li>Multi-channel alerts</li>
+                <li>AI-powered insights</li>
+                <li>Threshold management</li>
+            </ul>
+            <div class="feature-status new">Coming Soon</div>
+        </div>
+    </div>
+
+    <div class="features-cta">
+        <h2>Ready to Get Started?</h2>
+        <p>Join the next generation of blockchain analytics</p>
+        <div class="cta-buttons">
+            <button class="primary-btn" onclick="window.location.href='/trial.html'">Start Free Trial</button>
+            <a href="/pages/documentation.html" class="secondary-btn">View Documentation</a>
+        </div>
+    </div>
+
+    <div class="roadmap-section">
+        <h2 class="section-title">Project Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-item active">
+                <div class="roadmap-date">Q1 2025</div>
+                <div class="roadmap-content">
+                    <div class="status">Just Launched</div>
+                    <h3>Initial Release</h3>
+                    <ul>
+                        <li>Core AI Analytics Engine</li>
+                        <li>Basic Wallet Integration</li>
+                        <li>Beta Access Program</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="roadmap-item">
+                <div class="roadmap-date">Q2 2025</div>
+                <div class="roadmap-content">
+                    <div class="status">Coming Soon</div>
+                    <h3>Platform Enhancement</h3>
+                    <ul>
+                        <li>Advanced Analytics Dashboard</li>
+                        <li>Real-time Transaction Monitoring</li>
+                        <li>Community Features Launch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="roadmap-item">
+                <div class="roadmap-date">Q3 2025</div>
+                <div class="roadmap-content">
+                    <div class="status">Planned</div>
+                    <h3>Ecosystem Growth</h3>
+                    <ul>
+                        <li>Multi-chain Integration</li>
+                        <li>Developer SDK Beta</li>
+                        <li>AI Model Customization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="roadmap-item">
+                <div class="roadmap-date">Q4 2025</div>
+                <div class="roadmap-content">
+                    <div class="status">Planned</div>
+                    <h3>Enterprise & Beyond</h3>
+                    <ul>
+                        <li>Enterprise API Release</li>
+                        <li>Institutional Partnerships</li>
+                        <li>Global Expansion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-tracker">
+            <div class="progress-stat">
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36">
+                        <path d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                            fill="none"
+                            stroke="rgba(77, 124, 255, 0.1)"
+                            stroke-width="3"
+                        />
+                        <path d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                            fill="none"
+                            stroke="var(--primary-blue)"
+                            stroke-width="3"
+                            stroke-dasharray="27, 100"
+                        />
+                    </svg>
+                    <span class="progress-number">27%</span>
+                </div>
+                <div class="progress-label">Development Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-section">
+        <h2 class="section-title">Trusted by Leading Developers</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "SoLink AI has revolutionized how we track and analyze blockchain data. The AI insights are incredible."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar"></div>
+                    <div class="author-info">
+                        <div class="author-name">Alex Thompson</div>
+                        <div class="author-role">Lead Developer @ ChainTech</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "The real-time analytics and AI predictions have given us a significant edge in the market."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar"></div>
+                    <div class="author-info">
+                        <div class="author-name">Sarah Chen</div>
+                        <div class="author-role">CTO @ BlockFlow</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "Integration was seamless. The API is well-documented and the AI insights are spot-on."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar"></div>
+                    <div class="author-info">
+                        <div class="author-name">Marcus Webb</div>
+                        <div class="author-role">Blockchain Engineer @ DeFiHub</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="cursor">></span><span class="underscore">_</span>
+                        <span class="logo-text">SoLink AI</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced AI-powered analytics for the Solana ecosystem
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="/pages/features.html">Features</a></li>
+                            <li><a href="/pages/documentation.html">Documentation</a></li>
+                            <li><a href="/pages/documentation.html">API Reference</a></li>
+                            <li><a href="/pages/trial.html">Pricing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="/pages/documentation.html">Developer Hub</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://x.com/linkboosts" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="x-icon" width="16" height="16" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        Twitter
+                    </a>
+
+                </div>
+                <div class="footer-legal">
+                    <span>&copy; 2025 SoLink AI. All rights reserved.</span>
+                    <a href="/pages/privacy.html">Privacy Policy</a>
+                    <a href="/pages/terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles"></div>
+
+    <div class="install-modal" id="installModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Quick Install</h3>
+                <button class="close-btn" onclick="hideInstallModal()">&times;</button>
+            </div>
+            <div class="code-block">
+                <div class="code-header">
+                    <span>Terminal</span>
+                    <button class="copy-btn" onclick="copyInstallCommand()">Copy</button>
+                </div>
+                <pre><code>npm install solink-ai</code></pre>
+            </div>
+            <div class="modal-footer">
+                <a href="/pages/documentation.html" class="docs-link">View Full Documentation →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wallet-modal" id="walletModal">
+        <div class="modal-content wallet-content">
+            <div class="modal-header">
+                <h3>Connect Your Wallet</h3>
+                <button class="close-btn" onclick="hideWalletModal()">&times;</button>
+            </div>
+            
+            <div class="wallet-options">
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/phantom.svg" 
+                         alt="Phantom" 
+                         class="wallet-icon" />
+                    <span>Phantom</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/solflare.svg" 
+                         alt="Solflare" 
+                         class="wallet-icon" />
+                    <span>Solflare</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/backpack.svg" 
+                         alt="Backpack" 
+                         class="wallet-icon" />
+                    <span>Backpack</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/okx.svg" 
+                         alt="OKX" 
+                         class="wallet-icon" />
+                    <span>OKX Wallet</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+            </div>
+
+            <div class="wallet-footer">
+                <p>Wallet integration coming soon! Join our <a href="https://twitter.com/SoLinkAI" target="_blank">Twitter</a> for updates.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showInstallModal() {
+        document.getElementById('installModal').classList.add('active');
+    }
+
+    function hideInstallModal() {
+        document.getElementById('installModal').classList.remove('active');
+    }
+
+    function copyInstallCommand() {
+        navigator.clipboard.writeText('npm install solink-ai');
+        const copyBtn = event.target;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => {
+            copyBtn.textContent = 'Copy';
+        }, 2000);
+    }
+
+    function showWalletModal() {
+        document.getElementById('walletModal').classList.add('active');
+    }
+
+    function hideWalletModal() {
+        document.getElementById('walletModal').classList.remove('active');
+    }
+
+    window.onclick = function(event) {
+        const installModal = document.getElementById('installModal');
+        const walletModal = document.getElementById('walletModal');
+        if (event.target === installModal) {
+            hideInstallModal();
+        }
+        if (event.target === walletModal) {
+            hideWalletModal();
+        }
+    }
+
+    let wallet = null;
+    let walletBalance = 0;
+
+    async function getWalletBalance(publicKey) {
+        try {
+            const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+            const balance = await connection.getBalance(new solanaWeb3.PublicKey(publicKey));
+            return balance / solanaWeb3.LAMPORTS_PER_SOL;
+        } catch (err) {
+            console.error("Error fetching balance:", err);
+            return 0;
+        }
+    }
+
+    async function updateWalletInfo() {
+        if (!wallet) return;
+        
+        // Update balance
+        const balance = await getWalletBalance(wallet);
+        walletBalance = balance;
+        
+        const balanceElement = document.querySelector('.balance-amount');
+        balanceElement.textContent = `${balance.toFixed(4)} SOL`;
+        
+        // Update address
+        const addressElement = document.querySelector('.wallet-address');
+        addressElement.textContent = `${wallet.slice(0, 4)}...${wallet.slice(-4)}`;
+    }
+
+    async function disconnectWallet() {
+        if (window.solana && window.solana.isPhantom) {
+            try {
+                // First disconnect
+                await window.solana.disconnect();
+                
+                // Deauthorize the site completely
+                await window.solana.request({
+                    method: "wallet_deauthorizeSite",
+                });
+                
+                // Remove site from connected sites
+                await window.solana.request({
+                    method: "wallet_removeConnectedSite",
+                    params: {
+                        origin: window.location.origin
+                    }
+                });
+                
+                // Revoke all permissions
+                await window.solana.request({
+                    method: "wallet_revokeAllPermissions"
+                });
+                
+                wallet = null;
+                
+                // Reset UI
+                document.getElementById('connectBtn').style.display = 'flex';
+                document.getElementById('connectedState').style.display = 'none';
+                
+                // Clear all storage
+                sessionStorage.clear();
+                localStorage.clear();
+                indexedDB.deleteDatabase('phantom');
+                
+                // Clear all cookies
+                document.cookie.split(";").forEach(function(c) { 
+                    document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+                });
+
+                // Force complete reload and clear cache
+                if (window.caches) {
+                    // Clear all cache storage
+                    caches.keys().then(function(names) {
+                        for (let name of names) caches.delete(name);
+                    });
+                }
+                
+                // Reload with cache bypass
+                window.location.href = window.location.origin + 
+                    window.location.pathname + 
+                    '?nocache=' + Date.now();
+                
+            } catch (err) {
+                console.error("Error disconnecting:", err);
+                // Force reload even on error
+                window.location.reload(true);
+            }
+        }
+    }
+
+    async function connectPhantom() {
+        try {
+            const isPhantomInstalled = window.solana && window.solana.isPhantom;
+            
+            if (!isPhantomInstalled) {
+                alert("Please install Phantom wallet!");
+                window.open("https://phantom.app/", "_blank");
+                return;
+            }
+
+            // Check for existing connection and force disconnect
+            if (window.solana.isConnected) {
+                await disconnectWallet();
+                return; // Stop here, let the page reload handle reconnection
+            }
+
+            // Request new connection with forced new approval
+            const resp = await window.solana.request({
+                method: "connect",
+                params: {
+                    forceReapproval: true,
+                    requireNewConnection: true
+                }
+            });
+            
+            wallet = resp.publicKey.toString();
+            
+            // Update UI
+            document.getElementById('connectBtn').style.display = 'none';
+            document.getElementById('connectedState').style.display = 'flex';
+            document.getElementById('walletAddress').textContent = 
+                `${wallet.slice(0, 4)}...${wallet.slice(-4)}`;
+            
+            // Get and display balance
+            const balance = await getWalletBalance(wallet);
+            document.getElementById('walletBalance').textContent = 
+                `${balance.toFixed(4)} SOL`;
+            
+            hideWalletModal();
+            
+        } catch (err) {
+            console.error("Error connecting to Phantom:", err);
+            alert("Error connecting to wallet!");
+        }
+    }
+
+    // Prevent auto-connections on page load
+    window.addEventListener('load', async () => {
+        if (window.solana && window.solana.isConnected) {
+            await window.solana.disconnect();
+            sessionStorage.clear();
+            localStorage.clear();
+        }
+        
+        // Prevent automatic reconnection
+        if (window.solana) {
+            const originalConnect = window.solana.connect.bind(window.solana);
+            window.solana.connect = async (params) => {
+                // Always force new connection
+                return await originalConnect({
+                    ...params,
+                    onlyIfTrusted: false,
+                    forceReconnect: true,
+                    requestNewConnection: true
+                });
+            };
+        }
+    });
+
+    // Clear any cached data
+    document.addEventListener('DOMContentLoaded', () => {
+        sessionStorage.clear();
+        localStorage.clear();
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SoLink AI</title>
+    <link rel="stylesheet" href="../main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="grid-overlay"></div>
+    
+    <header class="trial-header">
+        <a href="/" class="logo-link">
+            <span class="cursor">></span><span class="underscore">_</span>
+            <span class="logo-text">SoLink AI</span>
+        </a>
+    </header>
+
+    <main class="legal-page">
+        <h1 class="gradient-text">Privacy Policy</h1>
+        <div class="legal-content">
+            <p class="last-updated">Last Updated: March 14, 2024</p>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>Welcome to SoLink AI. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our services.</p>
+            </section>
+
+            <section>
+                <h2>2. Information We Collect</h2>
+                <p>We collect information that you provide directly to us:</p>
+                <ul>
+                    <li>Email address when signing up for our waitlist</li>
+                    <li>Wallet addresses when connecting to our service</li>
+                    <li>Usage data and analytics information</li>
+                    <li>Technical data such as IP address and browser information</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the collected information for:</p>
+                <ul>
+                    <li>Providing and improving our services</li>
+                    <li>Communicating with you about updates and new features</li>
+                    <li>Analyzing usage patterns to enhance user experience</li>
+                    <li>Ensuring the security of our platform</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Data Security</h2>
+                <p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+            </section>
+
+            <section>
+                <h2>5. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal data</li>
+                    <li>Request correction of your data</li>
+                    <li>Request deletion of your data</li>
+                    <li>Withdraw consent at any time</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at privacy@solinkai.com</p>
+            </section>
+        </div>
+    </main>
+
+    <div class="wallet-modal" id="walletModal">
+        <div class="modal-content wallet-content">
+            <div class="modal-header">
+                <h3>Connect Your Wallet</h3>
+                <button class="close-btn" onclick="hideWalletModal()">&times;</button>
+            </div>
+            
+            <div class="wallet-options">
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/phantom.svg" alt="Phantom" class="wallet-icon" />
+                    <span>Phantom</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/solflare.svg" alt="Solflare" class="wallet-icon" />
+                    <span>Solflare</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/backpack.svg" alt="Backpack" class="wallet-icon" />
+                    <span>Backpack</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+                
+                <button class="wallet-option disabled">
+                    <img src="https://gmgn.ai/static/img/wallet/okx.svg" alt="OKX" class="wallet-icon" />
+                    <span>OKX Wallet</span>
+                    <span class="coming-soon">Coming Soon</span>
+                </button>
+            </div>
+
+            <div class="wallet-footer">
+                <p>Wallet integration coming soon! Join our <a href="https://twitter.com/SoLinkAI" target="_blank">Twitter</a> for updates.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showWalletModal() {
+            document.getElementById('walletModal').classList.add('active');
+        }
+
+        function hideWalletModal() {
+            document.getElementById('walletModal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('walletModal');
+            if (event.target === modal) {
+                hideWalletModal();
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - SoLink AI</title>
+    <link rel="stylesheet" href="../main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="grid-overlay"></div>
+    
+    <header class="trial-header">
+        <a href="/" class="logo-link">
+            <span class="cursor">></span><span class="underscore">_</span>
+            <span class="logo-text">SoLink AI</span>
+        </a>
+    </header>
+
+    <main class="legal-page">
+        <h1 class="gradient-text">Terms of Service</h1>
+        <div class="legal-content">
+            <p class="last-updated">Last Updated: March 14, 2024</p>
+
+            <section>
+                <h2>1. Agreement to Terms</h2>
+                <p>By accessing or using SoLink AI, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
+            </section>
+
+            <section>
+                <h2>2. Use License</h2>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable license to access and use our services.</p>
+            </section>
+
+            <section>
+                <h2>3. Service Description</h2>
+                <p>SoLink AI provides AI-powered analytics for the Solana ecosystem. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.</p>
+            </section>
+
+            <section>
+                <h2>4. User Responsibilities</h2>
+                <ul>
+                    <li>You must provide accurate information when using our services</li>
+                    <li>You are responsible for maintaining the security of your wallet</li>
+                    <li>You agree not to misuse or attempt to gain unauthorized access to our services</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Payment Terms</h2>
+                <p>All payments are processed in SOL. Prices are subject to change with notice. Refunds are handled on a case-by-case basis.</p>
+            </section>
+
+            <section>
+                <h2>6. Limitation of Liability</h2>
+                <p>We shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.</p>
+            </section>
+
+            <section>
+                <h2>7. Changes to Terms</h2>
+                <p>We reserve the right to modify these terms at any time. We will notify users of any material changes.</p>
+            </section>
+
+            <section>
+                <h2>8. Contact Information</h2>
+                <p>For any questions regarding these Terms, please contact us at legal@solinkai.com</p>
+            </section>
+        </div>
+    </main>
+
+    <div class="wallet-modal" id="walletModal">
+        <!-- Same wallet modal content as above -->
+    </div>
+
+    <script>
+        function showWalletModal() {
+            document.getElementById('walletModal').classList.add('active');
+        }
+
+        function hideWalletModal() {
+            document.getElementById('walletModal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('walletModal');
+            if (event.target === modal) {
+                hideWalletModal();
+            }
+        }
+    </script>
+</body>
+</html> 
